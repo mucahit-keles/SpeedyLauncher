@@ -1,4 +1,4 @@
-﻿<Window x:Class="Speedy_Launcher.MainWindow"
+<Window x:Class="Speedy_Launcher.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -188,46 +188,46 @@
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="24"/>
     </WindowChrome.WindowChrome>
-    <Border Name="Round" CornerRadius="10,10,10,10">
+    <Border Name="Kenarlik" CornerRadius="10,10,10,10">
         <Border.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF0097FF"/>
                 <GradientStop Color="#FF00FFA2" Offset="1"/>
             </LinearGradientBrush>
         </Border.Background>
-        <Grid Name="Frame">
-            <Grid Name="WindowChromeG" VerticalAlignment="Top">
-                <StackPanel Name="LeftSide" Margin="6,3,0,0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
-                    <Label Name="WindowLabel" Background="{x:Null}" Content="Speedy Başlatıcı" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Corbel" FontWeight="Bold" FontSize="12" Foreground="White">
+        <Grid Name="Cerceve">
+            <Grid Name="Baslik_Grid" VerticalAlignment="Top">
+                <StackPanel Name="SolTaraf" Margin="6,3,0,0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Label Name="BaslikYazisi" Background="{x:Null}" Content="Speedy Başlatıcı" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Corbel" FontWeight="Bold" FontSize="12" Foreground="White">
                     </Label>
                 </StackPanel>
-                <StackPanel Name="RightSide" Margin="0,0,5,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" WindowChrome.IsHitTestVisibleInChrome="True" Height="20">
-                    <Button Name="MinimizeButton" BorderBrush="{x:Null}" Background="{x:Null}" Width="20" Content="-" Foreground="White" Padding="0,-6.5,0,0" FontSize="20" Style="{DynamicResource ButtonStyle1}" Click="MinimizeButton_Click"/>
-                    <Button Name="MaximizeButton" BorderBrush="{x:Null}" Background="{x:Null}" Width="20" Content="🗖" Foreground="White" Padding="0,-3,0,0" FontSize="10" Style="{DynamicResource ButtonStyle1}" Click="MaximizeButton_Click"/>
-                    <Button Name="CloseButton" BorderBrush="{x:Null}" Background="{x:Null}" Width="20" Content="X" Foreground="White" Padding="0,-1.5,0,0" FontSize="15" Style="{DynamicResource ButtonStyle1}" Click="CloseButton_Click"/>
+                <StackPanel Name="SagTaraf" Margin="0,0,5,0" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" WindowChrome.IsHitTestVisibleInChrome="True" Height="20">
+                    <Button Name="KucultmeButonu" BorderBrush="{x:Null}" Background="{x:Null}" Width="20" Content="-" Foreground="White" Padding="0,-6.5,0,0" FontSize="20" Style="{DynamicResource ButtonStyle1}" Click="KucultmeButonu_Click"/>
+                    <Button Name="BuyutmeButonu" BorderBrush="{x:Null}" Background="{x:Null}" Width="20" Content="🗖" Foreground="White" Padding="0,-3,0,0" FontSize="10" Style="{DynamicResource ButtonStyle1}" Click="BuyutmeButonu_Click"/>
+                    <Button Name="KapatmaButonu" BorderBrush="{x:Null}" Background="{x:Null}" Width="20" Content="X" Foreground="White" Padding="0,-1.5,0,0" FontSize="15" Style="{DynamicResource ButtonStyle1}" Click="KapatmaButonu_Click"/>
                 </StackPanel>
             </Grid>
-            <Grid Name="Windows" Margin="2,20,2,2">
-                <Border Name="LauncherWindowB" Background="#FF080808" CornerRadius="0,0,10,10">
-                    <Grid Name="LauncherWindowG">
-                        <StackPanel Orientation="Horizontal" Name="IconList" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Height="95">
-                            <StackPanel Name="SpeedyMat" PreviewMouseLeftButtonDown="SpeedyMat_PreviewLeftMouseButtonDown" Orientation="Vertical" Margin="0,0,0,0" Background="#00000000">
-                                <Button Name="SpeedyMatBtn" Width="70" Height="70" Margin="0,0,0,0" BorderThickness="2" Style="{DynamicResource ButtonStyle2}" BorderBrush="#FF002EFF">
+            <Grid Name="Pencereler" Margin="2,20,2,2">
+                <Border Name="BaslaticiPenceresi_Border" Background="#FF080808" CornerRadius="0,0,10,10">
+                    <Grid Name="BaslaticiPenceresi_Grid">
+                        <StackPanel Orientation="Horizontal" Name="SimgeListesi" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,20,0,0" Height="95">
+                            <StackPanel Name="SpeedyMat" PreviewMouseLeftButtonDown="SpeedyMat_Click" Orientation="Vertical" Margin="0,0,0,0" Background="#00000000">
+                                <Button Name="SpeedyMat_Buton" Width="70" Height="70" Margin="0,0,0,0" BorderThickness="2" Style="{DynamicResource ButtonStyle2}" BorderBrush="#FF002EFF">
                                     <Button.Background>
                                         <ImageBrush ImageSource="Images/icon.png" Stretch="Uniform"/>
                                     </Button.Background>
                                 </Button>
-                                <Label Name="SpeedyMatName" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,5,0,0" Content="Speedy Matematik" Padding="0,0,0,0" FontFamily="Century Gothic" FontSize="13" Foreground="White"/>
+                                <Label Name="SpeedyMat_Yazi" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,5,0,0" Content="Speedy Matematik" Padding="0,0,0,0" FontFamily="Century Gothic" FontSize="13" Foreground="White"/>
                             </StackPanel>
                         </StackPanel>
-                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Width="40" Height="40" Name="VolumeToggler" PreviewMouseLeftButtonDown="SetVolume_PreviewMouseLeftButtonDown" Orientation="Vertical">
-                            <Path Name="VolumeImg_Circle" Data="M797 1984 c-198 -44 -354 -129 -493 -268 -103 -104 -160 -184 -216 -302 -70 -149 -82 -214 -82 -419 0 -167 2 -186 27 -268 104 -337 357 -590 694 -694 81 -25 102 -27 268 -27 203 -1 254 8 407 74 215 92 393 262 498 475 79 159 95 236 95 445 0 153 -3 185 -23 255 -49 168 -132 313 -256 443 -121 127 -265 215 -441 268 -78 23 -111 27 -250 30 -117 3 -178 -1 -228 -12z" Stretch="Uniform" StrokeThickness="2" Fill="#FF003AFF"/>
-                            <Path Name="VolumeImg" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,-34,0,0" StrokeThickness="2" StrokeLineJoin="Round" Data="M379 895 l-145 -145 -105 0 c-68 0 -109 -4 -117 -12 -17 -17 -17 -429 0 -446 8 -8 50 -12 123 -12 l110 0 140 -140 c77 -77 145 -140 152 -140 6 0 19 7 27 16 14 14 16 73 16 500 0 316 -4 492 -10 505 -6 10 -18 19 -28 19 -9 0 -83 -65 -163 -145z M648 1024 c-13 -12 -9 -91 5 -101 6 -6 29 -13 50 -17 104 -19 216 -106 268 -207 77 -154 47 -341 -73 -462 -52 -52 -136 -96 -199 -104 -50 -7 -61 -21 -57 -75 l3 -43 67 1 c142 1 298 119 376 281 l37 78 0 145 0 145 -37 78 c-75 156 -226 273 -370 284 -34 3 -66 2 -70 -3z M652 758 c-6 -6 -12 -31 -12 -55 0 -39 3 -45 40 -68 51 -32 75 -69 75 -115 0 -46 -24 -83 -75 -115 -37 -23 -40 -29 -40 -69 0 -62 17 -73 78 -51 89 34 162 139 162 235 0 50 -30 126 -64 167 -50 58 -138 97 -164 71z" Fill="White" Width="30" Height="27.7" Stretch="Uniform"/>
+                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Width="40" Height="40" Name="SesAyarlayici" PreviewMouseLeftButtonDown="SesAyarlayici_Click" Orientation="Vertical">
+                            <Path Name="SesSimgesi_Daire" Data="M797 1984 c-198 -44 -354 -129 -493 -268 -103 -104 -160 -184 -216 -302 -70 -149 -82 -214 -82 -419 0 -167 2 -186 27 -268 104 -337 357 -590 694 -694 81 -25 102 -27 268 -27 203 -1 254 8 407 74 215 92 393 262 498 475 79 159 95 236 95 445 0 153 -3 185 -23 255 -49 168 -132 313 -256 443 -121 127 -265 215 -441 268 -78 23 -111 27 -250 30 -117 3 -178 -1 -228 -12z" Stretch="Uniform" StrokeThickness="2" Fill="#FF003AFF"/>
+                            <Path Name="SesSimgesi" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,-34,0,0" StrokeThickness="2" StrokeLineJoin="Round" Data="M379 895 l-145 -145 -105 0 c-68 0 -109 -4 -117 -12 -17 -17 -17 -429 0 -446 8 -8 50 -12 123 -12 l110 0 140 -140 c77 -77 145 -140 152 -140 6 0 19 7 27 16 14 14 16 73 16 500 0 316 -4 492 -10 505 -6 10 -18 19 -28 19 -9 0 -83 -65 -163 -145z M648 1024 c-13 -12 -9 -91 5 -101 6 -6 29 -13 50 -17 104 -19 216 -106 268 -207 77 -154 47 -341 -73 -462 -52 -52 -136 -96 -199 -104 -50 -7 -61 -21 -57 -75 l3 -43 67 1 c142 1 298 119 376 281 l37 78 0 145 0 145 -37 78 c-75 156 -226 273 -370 284 -34 3 -66 2 -70 -3z M652 758 c-6 -6 -12 -31 -12 -55 0 -39 3 -45 40 -68 51 -32 75 -69 75 -115 0 -46 -24 -83 -75 -115 -37 -23 -40 -29 -40 -69 0 -62 17 -73 78 -51 89 34 162 139 162 235 0 50 -30 126 -64 167 -50 58 -138 97 -164 71z" Fill="White" Width="30" Height="27.7" Stretch="Uniform"/>
                         </StackPanel>
-                        <TextBlock Name="Credits" Text="" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="0,0,0,0" Foreground="White" FontSize="13.5" Margin="0,0,0,20">
-                            <TextBlock Name="ConsoleInput" Foreground="#FF00FF97" Text=">"/>
+                        <TextBlock Name="Imza" Text="" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="0,0,0,0" Foreground="White" FontSize="13.5" Margin="0,0,0,20">
+                            <TextBlock Name="ImzaIsareti" Foreground="#FF00FF97" Text=">"/>
                             Bu başlatıcı ve içindeki oyun/uygulama'lar
-                            <TextBlock Name="Creator" Text="Mücahit KELEŞ">
+                            <TextBlock Name="ImzaYazi" Text="Mücahit KELEŞ">
                                 <TextBlock.Foreground>
                                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                         <GradientStop Color="Magenta" Offset="0"/>
@@ -239,58 +239,58 @@
                         </TextBlock>
                     </Grid>
                 </Border>
-                <Border Name="GameWindowB" Background="#FF080808" CornerRadius="0,0,10,10" Visibility="Hidden">
-                    <Grid Name="GameWindowG" Margin="0,0,0,0">
-                        <StackPanel Name="GameWindow_Back" PreviewMouseLeftButtonDown="GameWindow_Back_Click" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,10,0,0" Background="#FF0A0A0A" Panel.ZIndex="1">
-                            <Image Name="GameWindow_BackArrow" Margin="3,0,0,0" Source="Images/arrow.png" HorizontalAlignment="Left" VerticalAlignment="Center" Height="10" Width="13"/>
-                            <Label Name="GameWindow_BackLabel" Margin="3,0,3,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" Content="Geri" Padding="0,0,0,0" FontSize="20" FontFamily="Cambria"/>
+                <Border Name="OyunPenceresi_Border" Background="#FF080808" CornerRadius="0,0,10,10" Visibility="Hidden">
+                    <Grid Name="OyunPenceresi_Grid" Margin="0,0,0,0">
+                        <StackPanel Name="OyunPenceresi_Geri" PreviewMouseLeftButtonDown="OyunPenceresi_Geri_Click" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,10,0,0" Background="#FF0A0A0A" Panel.ZIndex="1">
+                            <Image Name="OyunPenceresi_GeriOkIsareti" Margin="3,0,0,0" Source="Images/arrow.png" HorizontalAlignment="Left" VerticalAlignment="Center" Height="10" Width="13"/>
+                            <Label Name="OyunPenceresi_GeriYazisi" Margin="3,0,3,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="White" Background="{x:Null}" Content="Geri" Padding="0,0,0,0" FontSize="20" FontFamily="Cambria"/>
                         </StackPanel>
-                        <Grid Name="Settings">
-                            <Border Name="DiffB" VerticalAlignment="Center" Height="80" Margin="50,89,50,189" CornerRadius="10" BorderThickness="2" Background="#FF151515" HorizontalAlignment="Center" Width="400">
+                        <Grid Name="Ayarlar">
+                            <Border Name="Ayarlar_Border" VerticalAlignment="Center" Height="80" Margin="50,89,50,189" CornerRadius="10" BorderThickness="2" Background="#FF151515" HorizontalAlignment="Center" Width="400">
                                 <Border.BorderBrush>
                                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                         <GradientStop Color="Yellow" Offset="0"/>
                                         <GradientStop Color="#FFFF8000" Offset="1"/>
                                     </LinearGradientBrush>
                                 </Border.BorderBrush>
-                                <Grid Name="DiffG">
-                                    <Label Name="DiffLabel" Margin="0,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Konular" Padding="0,0,0,0" FontFamily="Century Gothic" FontWeight="Bold" FontSize="20" Foreground="White"/>
-                                    <StackPanel Name="DiffSP" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10">
-                                        <Button Margin="0,0,5,0" Click="DifficultyButton_Click" Uid="+" Content="Toplama" FontFamily="Century Gothic" FontSize="16" Padding="0,-1,0,1" Name="AdditionT" Background="#FF111111" Foreground="White" Width="80" BorderThickness="0,0,0,2" BorderBrush="Lime" Style="{DynamicResource ButtonStyle1}"/>
-                                        <Button Margin="0,0,5,0" Click="DifficultyButton_Click" Uid="-" Content="Çıkarma" FontFamily="Century Gothic" FontSize="16" Padding="0,-1,0,1" Name="SubstractionT" Background="#FF111111" Foreground="White" Width="80" BorderThickness="0,0,0,2" BorderBrush="Lime" Style="{DynamicResource ButtonStyle1}"/>
-                                        <Button Margin="0,0,5,0" Click="DifficultyButton_Click" Uid="*" Content="Çarpma" FontFamily="Century Gothic" FontSize="16" Padding="0,-1,0,1" Name="MultiplicationT" Background="#FF111111" Foreground="White" Width="80" BorderThickness="0,0,0,2" BorderBrush="Red" Style="{DynamicResource ButtonStyle1}"/>
-                                        <Button Margin="0,0,0,0" Click="DifficultyButton_Click" Uid="/" Content="Bölme" FontFamily="Century Gothic" FontSize="16" Padding="0,-1,0,1" Name="DividationT" Background="#FF111111" Foreground="White" Width="80" BorderThickness="0,0,0,2" BorderBrush="Red" Style="{DynamicResource ButtonStyle1}"/>
+                                <Grid Name="Ayarlar_Grid">
+                                    <Label Name="KonularBaslik" Margin="0,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Konular" Padding="0,0,0,0" FontFamily="Century Gothic" FontWeight="Bold" FontSize="20" Foreground="White"/>
+                                    <StackPanel Name="Konular" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10">
+                                        <Button Margin="0,0,5,0" Click="IslemButonu_Click" Uid="+" Content="Toplama" FontFamily="Century Gothic" FontSize="16" Padding="0,-1,0,1" Name="ToplamaButonu" Background="#FF111111" Foreground="White" Width="80" BorderThickness="0,0,0,2" BorderBrush="Lime" Style="{DynamicResource ButtonStyle1}"/>
+                                        <Button Margin="0,0,5,0" Click="IslemButonu_Click" Uid="-" Content="Çıkarma" FontFamily="Century Gothic" FontSize="16" Padding="0,-1,0,1" Name="CikarmaButonu" Background="#FF111111" Foreground="White" Width="80" BorderThickness="0,0,0,2" BorderBrush="Lime" Style="{DynamicResource ButtonStyle1}"/>
+                                        <Button Margin="0,0,5,0" Click="IslemButonu_Click" Uid="*" Content="Çarpma" FontFamily="Century Gothic" FontSize="16" Padding="0,-1,0,1" Name="CarpmaButonu" Background="#FF111111" Foreground="White" Width="80" BorderThickness="0,0,0,2" BorderBrush="Red" Style="{DynamicResource ButtonStyle1}"/>
+                                        <Button Margin="0,0,0,0" Click="IslemButonu_Click" Uid="/" Content="Bölme" FontFamily="Century Gothic" FontSize="16" Padding="0,-1,0,1" Name="BolmeButonu" Background="#FF111111" Foreground="White" Width="80" BorderThickness="0,0,0,2" BorderBrush="Red" Style="{DynamicResource ButtonStyle1}"/>
                                     </StackPanel>
                                 </Grid>
                             </Border>
-                            <Border PreviewMouseLeftButtonDown="LaunchSpeedyMat_PreviewMouseLeftButtonDown" Name="LaunchSpeedyMat" BorderThickness="1" Margin="0,40,0,0" BorderBrush="White" CornerRadius="5" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200">
+                            <Border PreviewMouseLeftButtonDown="OyunuBaslat_Click" Name="OyunuBaslat" BorderThickness="1" Margin="0,40,0,0" BorderBrush="White" CornerRadius="5" Height="35" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200">
                                 <Border.Background>
                                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                         <GradientStop Color="#FF0097FF" Offset="0"/>
                                         <GradientStop Color="#FF0017FF" Offset="1"/>
                                     </LinearGradientBrush>
                                 </Border.Background>
-                                <Label Name="LaunchSpeedyMat_Label" Foreground="White" FontFamily="Century Gothic" FontSize="20" Content="Oyunu başlat" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0"/>
+                                <Label Name="OyunuBaslat_Yazisi" Foreground="White" FontFamily="Century Gothic" FontSize="20" Content="Oyunu başlat" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0"/>
                             </Border>
                         </Grid>
-                        <Grid Name="Game" Visibility="Hidden">
-                            <Border Name="BackgroundImg" CornerRadius="0,0,10,10" Panel.ZIndex="-1">
+                        <Grid Name="Oyun" Visibility="Hidden">
+                            <Border Name="ArkaplanResimi" CornerRadius="0,0,10,10" Panel.ZIndex="-1">
                                 <Border.Background>
                                     <ImageBrush ImageSource="Images/school.png" Stretch="Uniform"/>
                                 </Border.Background>
                             </Border>
-                            <Border Name="StatsB" BorderThickness="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Background="#FF000019" CornerRadius="0" BorderBrush="#FF000049">
-                                <StackPanel Name="StatsSP">
-                                    <Label Name="StatT" Content="Doğru: 0" Padding="0,0,0,0" Margin="0,0,0,0" FontFamily="Century Gothic" FontSize="20" Foreground="#FF00A000" FontWeight="Bold"/>
-                                    <Label Name="StatF" Content="Yanlış: 0" Padding="0,0,0,0" Margin="0,0,0,0" FontFamily="Century Gothic" FontSize="20" Foreground="#FFA00000" FontWeight="Bold"/>
-                                    <Label Name="StatP" Content="Puan: 0" Padding="0,0,0,0" Margin="0,0,0,0" FontFamily="Century Gothic" FontSize="20" Foreground="#FFA0A000" FontWeight="Bold"/>
+                            <Border Name="SkorTablosu" BorderThickness="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Background="#FF000019" CornerRadius="0" BorderBrush="#FF000049">
+                                <StackPanel Name="Tablo">
+                                    <Label Name="DogruSayisi_Skor" Content="Doğru: 0" Padding="0,0,0,0" Margin="0,0,0,0" FontFamily="Century Gothic" FontSize="20" Foreground="#FF00A000" FontWeight="Bold"/>
+                                    <Label Name="YanlisSayisi_Skor" Content="Yanlış: 0" Padding="0,0,0,0" Margin="0,0,0,0" FontFamily="Century Gothic" FontSize="20" Foreground="#FFA00000" FontWeight="Bold"/>
+                                    <Label Name="PuanSayisi_Skor" Content="Puan: 0" Padding="0,0,0,0" Margin="0,0,0,0" FontFamily="Century Gothic" FontSize="20" Foreground="#FFA0A000" FontWeight="Bold"/>
                                 </StackPanel>
                             </Border>
-                            <Border Background="White" Name="MessageBox" VerticalAlignment="Bottom" Margin="70,0,70,30" Height="60" CornerRadius="10" BorderThickness="3,3,3,3" BorderBrush="#FF00FF8B" Visibility="Hidden" Panel.ZIndex="1">
-                                <StackPanel Name="MessageBoxSP">
-                                    <Label Name="QuestionLabel" Margin="14,6,0,0" Content="1+1 işleminin sonucu nedir?" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" FontFamily="Century Gothic"/>
-                                    <TextBox Name="AnswerBox" Text="" KeyDown="AnswerBox_KeyDown" Padding="0,0,0,0" VerticalContentAlignment="Center" BorderThickness="1,1,1,1" VerticalAlignment="Bottom" Height="25" Margin="13,2,40,0" BorderBrush="Black" Style="{DynamicResource TextBoxStyle1}"/>
-                                    <Path Name="Checkmark" PreviewMouseLeftButtonDown="Checkmark_PreviewMouseLeftButtonDown" Margin="0,-28,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="30" Height="30" Data="M858 1990 c-223 -36 -408 -129 -564 -284 -134 -135 -220 -287 -267 -476 -30 -121 -30 -339 0 -460 47 -189 133 -341 267 -476 135 -134 287 -220 476 -267 121 -30 339 -30 460 0 189 47 341 133 476 267 134 135 220 287 267 476 30 121 30 339 0 460 -47 189 -133 341 -267 476 -134 133 -289 220 -471 265 -92 23 -291 33 -377 19z m624 -523 c15 -12 -17 -62 -303 -472 -176 -253 -327 -463 -335 -468 -19 -11 -20 -10 -197 176 -133 140 -139 149 -123 165 17 16 26 9 162 -133 130 -135 146 -148 158 -133 7 10 147 211 312 448 164 236 301 430 304 430 3 0 13 -6 22 -13z" Stretch="Uniform" Fill="#FF00FF8B" Stroke="White" FlowDirection="RightToLeft" RenderTransformOrigin="0.5,0.5">
+                            <Border Background="White" Name="CevapKutusu_Border" VerticalAlignment="Bottom" Margin="70,0,70,30" Height="60" CornerRadius="10" BorderThickness="3,3,3,3" BorderBrush="#FF00FF8B" Visibility="Hidden" Panel.ZIndex="1">
+                                <StackPanel Name="CevapKutusu_SP">
+                                    <Label Name="SoruYazisi" Margin="14,6,0,0" Content="1+1 işleminin sonucu nedir?" Padding="0,0,0,0" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" FontFamily="Century Gothic"/>
+                                    <TextBox Name="CevapKutusu" Text="" KeyDown="CevapKutusu_KeyDown" Padding="0,0,0,0" VerticalContentAlignment="Center" BorderThickness="1,1,1,1" VerticalAlignment="Bottom" Height="25" Margin="13,2,40,0" BorderBrush="Black" Style="{DynamicResource TextBoxStyle1}"/>
+                                    <Path Name="TikIsareti" PreviewMouseLeftButtonDown="TikIsareti_Click" Margin="0,-28,5,0" HorizontalAlignment="Right" VerticalAlignment="Center" Width="30" Height="30" Data="M858 1990 c-223 -36 -408 -129 -564 -284 -134 -135 -220 -287 -267 -476 -30 -121 -30 -339 0 -460 47 -189 133 -341 267 -476 135 -134 287 -220 476 -267 121 -30 339 -30 460 0 189 47 341 133 476 267 134 135 220 287 267 476 30 121 30 339 0 460 -47 189 -133 341 -267 476 -134 133 -289 220 -471 265 -92 23 -291 33 -377 19z m624 -523 c15 -12 -17 -62 -303 -472 -176 -253 -327 -463 -335 -468 -19 -11 -20 -10 -197 176 -133 140 -139 149 -123 165 17 16 26 9 162 -133 130 -135 146 -148 158 -133 7 10 147 211 312 448 164 236 301 430 304 430 3 0 13 -6 22 -13z" Stretch="Uniform" Fill="#FF00FF8B" Stroke="White" FlowDirection="RightToLeft" RenderTransformOrigin="0.5,0.5">
                                         <Path.RenderTransform>
                                             <TransformGroup>
                                                 <RotateTransform Angle="180"/>
