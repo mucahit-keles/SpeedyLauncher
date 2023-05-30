@@ -96,14 +96,14 @@ namespace Speedy_Launcher
 				else
 				{
 					YanlisSayisi++;
-					if (f % 3 == 0 && PuanSayisi > 0)
+					if (YanlisSayisi % 3 == 0 && PuanSayisi > 0)
 					{
 						PuanSayisi--;
 					}
 				}
-				DogruSayisi_Skor.Content = $"Doğru: {t}";
-				YanlisSayisi_Skor.Content = $"Yanlış: {f}";
-				PuanSayisi_Skor.Content = $"Puan: {p}";
+				DogruSayisi_Skor.Content = $"Doğru: {DogruSayisi}";
+				YanlisSayisi_Skor.Content = $"Yanlış: {YanlisSayisi}";
+				PuanSayisi_Skor.Content = $"Puan: {PuanSayisi}";
 				if (SesAcik == true)
 				{
 					SesOynatici.SoundLocation = CevapDogru == true ? Path.GetFullPath("SFX/Correct.wav") : Path.GetFullPath("SFX/Incorrect.wav");
@@ -118,7 +118,7 @@ namespace Speedy_Launcher
 			};
 		}
 		
-		private async void Checkmark_PreviewMouseLeftButtonDown(object Nesne, MouseButtonEventArgs OlayBilgisi)
+		private async void TikIsareti_Click(object Nesne, MouseButtonEventArgs OlayBilgisi)
 		{
 			Keyboard.ClearFocus();
 			CevapKutusu.Visibility = Visibility.Hidden;
