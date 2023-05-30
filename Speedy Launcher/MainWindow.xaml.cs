@@ -41,10 +41,10 @@ namespace Speedy_Launcher
 		private void IslemButonu_Click(object Nesne, RoutedEventArgs OlayBilgisi)
 		{
 			Button IslemButonu = Nesne as Button;
-			string Islem = button.Uid.ToString();
-			if (button.BorderBrush == YesilFirca && Operasyonlar.Length > 1 || button.BorderBrush == KirmiziFirca)
+			string Islem = IslemButonu.Uid.ToString();
+			if (IslemButonu.BorderBrush == YesilFirca && Operasyonlar.Length > 1 || IslemButonu.BorderBrush == KirmiziFirca)
 			{
-				Operasyonlar = button.BorderBrush == YesilFirca ? Operasyonlar.Replace(button.Uid, "") : Operasyonlar + Islem;
+				Operasyonlar = IslemButonu.BorderBrush == YesilFirca ? Operasyonlar.Replace(IslemButonu.Uid, "") : Operasyonlar + Islem;
 				IslemButonu.BorderBrush = IslemButonu.BorderBrush == KirmiziFirca ? YesilFirca : KirmiziFirca;
 			}
 		}
