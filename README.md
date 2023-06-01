@@ -1,6 +1,6 @@
-# Speedy Launcher
+# SpeedyLauncher
 
-İlkokul ve ortaokula giden çocukların matematik becerilerini artırmalarına yönelik eğitici bir oyun.
+İlkokul ve ortaokula giden öğrencilerin matematik becerilerini artırmalarına yönelik eğitici bir oyun.
 
 - Oyunun yapımında WPF ile C# ve XAML kodlama dilleri kullanılmıştır.
 - Kullanıcıya seçtiği işlemlerden rastgele sorular sorarak, matematik pratiğini geliştirmeyi amaçlar.
