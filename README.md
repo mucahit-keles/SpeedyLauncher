@@ -1,13 +1,13 @@
 # SpeedyLauncher
 
-İlkokul ve ortaokula giden öğrencilerin matematik becerilerini artırmalarına yönelik eğitici bir oyun.
+An educational game for primary and middle school students to practice their math skills.
 
-- Oyunun yapımında WPF ile C# ve XAML kodlama dilleri kullanılmıştır.
-- Kullanıcıya seçtiği işlemlerden rastgele sorular sorarak, matematik pratiğini geliştirmeyi amaçlar.
-- Oyunda puan sistemi bulunmaktadır ve her bir doğrunuz size bir puan kazandırıp, her 3 yanlışınız ise size bir puan kaybettirecektir.
-- An itibarı ile oyunda sadece bir tane kedi karakteri bulunmaktadır.
+- I used WPF with C# and XAML to develop the game.
+- After the user chooses what math operations they want, the game asks them random math questions to help them practice their math.
+- There is also a point system in the game; you get one point for each right answer, and you lose a point for 3 wrong answers.
+- As of now there are only 2 cat characters in the game.
 
-Oyundan bazı resimler:
+Some images from the game:
 <br>
 <img src="https://raw.githubusercontent.com/mucahit-keles/SpeedyLauncher/main/Resim1.png" alt="Resim1" width="400" height="315">
 <br>
